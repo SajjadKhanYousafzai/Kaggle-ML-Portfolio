@@ -65,7 +65,7 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 <tr>
 <td width="50%">
 
-### 🌧️ **[Rain Prediction System](./Binary%20Prediction%20with%20a%20Rainfall)**
+### 🌧️ **[Rain Prediction System](./Rainfall-Prediction)**
 **The Problem:** Farmers and city planners need to know when it will rain to make critical decisions.
 
 **The Solution:** An AI system that predicts rainfall with high accuracy, accessible through a web app.
@@ -83,11 +83,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Helps farmers plan irrigation, cities prepare for floods, and events avoid weather disasters.
 
-**🔗 [Explore Project](./Binary%20Prediction%20with%20a%20Rainfall)**
+**🔗 [Explore Project](./Rainfall-Prediction)**
 
 ---
 
-### 👤 **[Customer Understanding Platform](./Customer%20Personality%20Analysis)**
+### 👤 **[Customer Understanding Platform](./Customer-Segmentation-Analysis)**
 **The Problem:** Businesses struggle to understand what different customers want.
 
 **The Solution:** An intelligent system that groups customers based on their behavior and preferences.
@@ -105,11 +105,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Companies can tailor their marketing, products, and services to what customers actually want.
 
-**🔗 [Explore Project](./Customer%20Personality%20Analysis)**
+**🔗 [Explore Project](./Customer-Segmentation-Analysis)**
 
 ---
 
-### 🩺 **[Diabetes Early Detection](./Diabetes%20Classification)**
+### 🩺 **[Diabetes Early Detection](./Diabetes-Prediction)**
 **The Problem:** Diabetes often goes undiagnosed until serious complications develop.
 
 **The Solution:** An AI-powered screening tool that identifies diabetes risk from simple health metrics.
@@ -127,11 +127,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Enables early intervention, potentially saving lives and reducing healthcare costs.
 
-**🔗 [Explore Project](./Diabetes%20Classification) | [Try Demo](./Diabetes%20Classification/Diabetes.ipynb)**
+**🔗 [Explore Project](./Diabetes-Prediction) | [Try Demo](./Diabetes-Prediction/Diabetes.ipynb)**
 
 ---
 
-### ❤️ **[Heart Disease Risk Assessment](./Heart%20Dieases%20Project)**
+### ❤️ **[Heart Disease Risk Assessment](./Heart-Disease-Prediction)**
 **The Problem:** Heart disease is the leading cause of death worldwide, often preventable if caught early.
 
 **The Solution:** An intelligent system that assesses cardiovascular risk from routine health data.
@@ -149,12 +149,12 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Empowers people to take proactive steps toward heart health before it's too late.
 
-**🔗 [Explore Project](./Heart%20Dieases%20Project)**
+**🔗 [Explore Project](./Heart-Disease-Prediction)**
 
 </td>
 <td width="50%">
 
-### 💰 **[Smart Loan Decision System](./Loan%20Approval%20Pred)**
+### 💰 **[Smart Loan Decision System](./Loan-Approval-Prediction)**
 **The Problem:** Loan decisions can be slow, inconsistent, and sometimes unfair.
 
 **The Solution:** An AI system that makes fast, fair, and data-driven lending decisions.
@@ -172,11 +172,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Faster loan approvals, reduced bias, better risk management for lenders.
 
-**🔗 [Explore Project](./Loan%20Approval%20Pred)**
+**🔗 [Explore Project](./Loan-Approval-Prediction)**
 
 ---
 
-### 🍄 **[Mushroom Safety Classifier](./Mushroom_cleaned)**
+### 🍄 **[Mushroom Safety Classifier](./Mushroom-Classification)**
 **The Problem:** Eating poisonous mushrooms can be fatal, but they look similar to edible ones.
 
 **The Solution:** A highly accurate AI that identifies poisonous vs. edible mushrooms.
@@ -194,11 +194,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Helps foragers, restaurants, and food safety inspectors prevent mushroom poisoning.
 
-**🔗 [Explore Project](./Mushroom_cleaned) | [Try App](./Mushroom_cleaned/Mushroom.ipynb)**
+**🔗 [Explore Project](./Mushroom-Classification) | [Try App](./Mushroom-Classification/Mushroom.ipynb)**
 
 ---
 
-### 📄 **[Resume Intelligence System](./Resume%20NLP%20Project)**
+### 📄 **[Resume Intelligence System](./Resume-Screening-NLP)**
 **The Problem:** Hiring managers spend hours manually reviewing hundreds of resumes.
 
 **The Solution:** An NLP-powered system that automatically analyzes and ranks resumes.
@@ -216,11 +216,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Saves hiring time, reduces bias, helps candidates get noticed for the right roles.
 
-**🔗 [Explore Project](./Resume%20NLP%20Project) | [View Analysis](./Resume%20NLP%20Project/Resume_data.ipynb)**
+**🔗 [Explore Project](./Resume-Screening-NLP) | [View Analysis](./Resume-Screening-NLP/Resume_data.ipynb)**
 
 ---
 
-### 🧬 **[Molecular Property Predictor](./molecular-machine-learning)**
+### 🧬 **[Molecular Property Predictor](./Molecular-Machine-Learning)**
 **The Problem:** Traditional drug discovery takes 10+ years and billions of dollars.
 
 **The Solution:** AI that predicts molecular properties, accelerating drug development.
@@ -238,11 +238,11 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Potentially speeds up life-saving drug discovery and reduces development costs.
 
-**🔗 [Explore Project](./molecular-machine-learning) | [View Research](./molecular-machine-learning/molecular.ipynb)**
+**🔗 [Explore Project](./Molecular-Machine-Learning) | [View Research](./Molecular-Machine-Learning/molecular.ipynb)**
 
 ---
 
-### 🌾 **[AI Smart Farming Advisor](./Crop%20Recommendation%20Project)**
+### 🌾 **[AI Smart Farming Advisor](./Crop-Recommendation)**
 **The Problem:** Farmers lack access to expert agricultural knowledge — wrong crop choices, excess fertilizers, and poor irrigation lead to low yields and soil damage.
 
 **The Solution:** An AI-powered advisory system that takes soil & climate data and recommends the best crop, fertilizer, and irrigation plan.
@@ -261,7 +261,7 @@ Each solution is built with state-of-the-art technology but designed to be **acc
 
 **💡 Real-World Impact:** Empowers small and large-scale farmers in India and globally with expert-level precision agriculture — accessible to anyone through a simple web app.
 
-**🔗 [Explore Project](./Crop%20Recommendation%20Project) | [View Notebook](./Crop%20Recommendation%20Project/crop.ipynb)**
+**🔗 [Explore Project](./Crop-Recommendation) | [View Notebook](./Crop-Recommendation/crop.ipynb)**
 
 </td>
 </tr>
