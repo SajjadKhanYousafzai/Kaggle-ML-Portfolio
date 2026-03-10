@@ -1,139 +1,170 @@
-# 🌾 AI Smart Farming Advisor — Crop Recommendation System
+﻿# ðŸŒ¾ CropWise â€” AI Crop Recommendation System
 
-> **Empowering Farmers with Data-Driven Precision Agriculture**
+> **End-to-End Machine Learning Â· From Notebook to Production Web App**
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8.0-orange?logo=scikit-learn)](https://scikit-learn.org/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-3.2.0-red)](https://xgboost.readthedocs.io/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 📌 Project Overview
+## ðŸ“Œ Project Overview
 
-This end-to-end machine learning project helps farmers make informed decisions about:
+CropWise is a full-stack AI application that helps farmers make data-driven decisions about which crop to grow based on soil nutrients and climate conditions.
 
-- 🌱 **Crop Recommendation** — Which crop to grow based on soil & climate data
-- 🧪 **Fertilizer Suggestion** — What nutrients the soil needs
-- 💧 **Irrigation Planning** — How much water the crop requires
-
-The system takes soil parameters as input and uses trained ML models to provide actionable recommendations.
-
----
-
-## 🧬 Dataset Features
-
-| Feature | Description |
-|---|---|
-| **N** | Ratio of Nitrogen content in soil |
-| **P** | Ratio of Phosphorous content in soil |
-| **K** | Ratio of Potassium content in soil |
-| **Temperature** | Temperature in degree Celsius |
-| **Humidity** | Relative humidity in % |
-| **pH** | pH value of the soil |
-| **Rainfall** | Rainfall in mm |
-| **Label** | Target crop name |
-
-**Source:** [Kaggle — Crop Recommendation Dataset by Atharva Ingle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+**What's inside:**
+- ðŸ”¬ **ML Notebook** â€” End-to-end data analysis, feature engineering, model training & evaluation
+- âš¡ **FastAPI Backend** â€” Python REST API serving the trained Random Forest model locally  
+- ðŸŒ **Next.js Frontend** â€” Beautiful, responsive TypeScript web app deployable on Vercel
+- â˜ï¸ **Vercel Serverless** â€” Python inference function for zero-infrastructure cloud deployment
 
 ---
 
-## 🛠️ Skills & Techniques Used
-
-- **Classification** — Multi-class crop prediction (22 crop types)
-- **Recommendation Systems** — Cosine similarity-based fertilizer/crop matching
-- **Agricultural Analytics** — Feature importance, soil segmentation via clustering
-- **Regression** — Irrigation water requirement estimation
-- **EDA** — Distribution plots, correlation heatmaps, Plotly interactive charts
-
----
-
-## 🤖 Models Trained
-
-| Model | Task |
-|---|---|
-| Random Forest | Crop classification |
-| XGBoost | Crop classification |
-| LightGBM | Crop classification |
-| CatBoost | Crop classification |
-| SVM | Crop classification |
-| Logistic Regression | Baseline |
-| Gradient Boosting Regressor | Irrigation planning |
-| KMeans Clustering | Soil segmentation |
-
----
-
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```
-Crop Recommendation Project/
-├── crop.ipynb              # Main end-to-end notebook
-├── requirements.txt        # Package dependencies
-├── README.md               # Project documentation
-└── Dataset/
-    └── Crop_recommendation.csv
+Crop-Recommendation/
+â”œâ”€â”€ crop.ipynb                  # End-to-end ML notebook
+â”œâ”€â”€ requirements.txt            # Notebook dependencies
+â”œâ”€â”€ README.md
+â”œâ”€â”€ Dataset/
+â”‚   â””â”€â”€ Crop_recommendation.csv # Source dataset (2200 records, 22 crops)
+â”œâ”€â”€ Models/
+â”‚   â”œâ”€â”€ crop_recommendation_rf_model.pkl  # Trained Random Forest pipeline
+â”‚   â””â”€â”€ target_encoder.pkl               # Label encoder for crop names
+â””â”€â”€ crop-frontend/              # Full-stack web application
+    â”œâ”€â”€ app/                    # Next.js 14 App Router (TypeScript)
+    â”œâ”€â”€ components/             # UI components (Navbar, HeroSection, CropForm, ResultCardâ€¦)
+    â”œâ”€â”€ lib/                    # Types & crop info data
+    â”œâ”€â”€ api/
+    â”‚   â””â”€â”€ predict.py          # Vercel Python serverless function
+    â”œâ”€â”€ backend/
+    â”‚   â”œâ”€â”€ main.py             # FastAPI server (local dev)
+    â”‚   â””â”€â”€ requirements.txt    # FastAPI + ML dependencies
+    â””â”€â”€ models/                 # Copy .pkl files here for deployment
 ```
 
 ---
 
-## ⚙️ Setup & Installation
+## ðŸ§¬ Dataset Features
 
-### 1. Create and activate the conda environment
+| Feature | Description | Range |
+|---|---|---|
+| **N** | Nitrogen content in soil (kg/ha) | 0 â€“ 140 |
+| **P** | Phosphorous content in soil (kg/ha) | 5 â€“ 145 |
+| **K** | Potassium content in soil (kg/ha) | 5 â€“ 205 |
+| **Temperature** | Temperature (Â°C) | 8 â€“ 44 |
+| **Humidity** | Relative humidity (%) | 14 â€“ 100 |
+| **pH** | Soil pH value | 3.5 â€“ 10 |
+| **Rainfall** | Rainfall (mm) | 20 â€“ 300 |
+| **Label** | Target crop (22 classes) | â€” |
+
+**Source:** [Kaggle â€” Crop Recommendation Dataset by Atharva Ingle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+
+---
+
+## ðŸ¤– Models Trained
+
+| Model | Accuracy |
+|---|---|
+| **Random Forest** âœ… *(deployed)* | **99.5%** |
+| XGBoost | 99.3% |
+| LightGBM | 98.8% |
+| CatBoost | 98.6% |
+| SVM | 97.5% |
+| Logistic Regression | 95.2% |
+
+> **Feature Engineering:** NPK mean, Temperatureâ€“Humidity Index (THI), pH category, Rainfall level â€” engineered features that boost model performance.
+
+---
+
+## ðŸ› ï¸ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Data & ML | Python Â· pandas Â· scikit-learn Â· XGBoost Â· LightGBM Â· CatBoost |
+| Visualization | Matplotlib Â· Seaborn Â· Plotly |
+| Backend API | FastAPI Â· Uvicorn Â· Joblib |
+| Frontend | Next.js 14 Â· TypeScript Â· Tailwind CSS Â· Framer Motion |
+| Deployment | Vercel (Next.js + Python Serverless) |
+
+---
+
+## âš™ï¸ Setup & Running
+
+### 1. Clone & install notebook dependencies
 
 ```bash
 conda create -n ml_env python=3.11
 conda activate ml_env
-```
-
-### 2. Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### 3. Launch the notebook
-
-```bash
 jupyter notebook crop.ipynb
 ```
 
----
+### 2. Run the FastAPI backend
 
-## 📦 Dependencies
+```bash
+cd crop-frontend/backend
+pip install -r requirements.txt
 
-```
-numpy==2.4.2
-pandas==3.0.1
-matplotlib==3.10.8
-seaborn==0.13.2
-plotly==6.6.0
-scikit-learn==1.8.0
-xgboost==3.2.0
-lightgbm==4.6.0
-catboost==1.2.10
-joblib==1.5.3
-scipy==1.17.1
+# Copy trained models first
+cp ../Models/crop_recommendation_rf_model.pkl ../crop-frontend/models/
+cp ../Models/target_encoder.pkl ../crop-frontend/models/
+
+uvicorn main:app --reload --port 8000
 ```
 
+API runs at **http://localhost:8000** Â· Swagger docs at **http://localhost:8000/docs**
+
+### 3. Run the Next.js frontend
+
+```bash
+cd crop-frontend
+
+# Point frontend to local backend
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local
+
+npm install
+npm run dev
+```
+
+Open **http://localhost:3000**
+
 ---
 
-## 📊 Key Results
+## â˜ï¸ Deploy to Vercel
 
-- Achieved **99%+ accuracy** with Random Forest & XGBoost on crop classification
-- Feature importance analysis reveals **Rainfall**, **Humidity**, and **K (Potassium)** as top predictors
-- Soil segmentation identifies distinct soil profiles across the dataset
+```bash
+cd crop-frontend
+
+# Remove local API URL so Vercel uses its own serverless function
+# (comment out NEXT_PUBLIC_API_URL in .env.local)
+
+npm install -g vercel
+vercel
+```
 
 ---
 
-## 👤 Author
+## ðŸ“Š Key Results
+
+- **99.5% accuracy** â€” Random Forest on 22-class crop classification
+- Top predictors: **Rainfall**, **Humidity**, **K (Potassium)**
+- Engineered features (NPK_mean, THI) improve boundary separation between similar crops
+
+---
+
+## ðŸ‘¤ Author
 
 **Sajjad Ali Shah**
 - LinkedIn: [sajjad-ali-shah47](https://www.linkedin.com/in/sajjad-ali-shah47/)
-- Dataset: [Kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+- Dataset: [Kaggle â€” Crop Recommendation](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
 
 ---
 
-## 📄 License
+## ðŸ“„ License
 
-This project is licensed under the MIT License.
-
+MIT License
