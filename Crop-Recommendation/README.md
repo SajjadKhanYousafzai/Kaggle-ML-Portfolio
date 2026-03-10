@@ -8,6 +8,13 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](https://crop-recommendation-system-sajjad-ali-shah.vercel.app/)
+
+## Live Demo
+
+**[https://crop-recommendation-system-sajjad-ali-shah.vercel.app/](https://crop-recommendation-system-sajjad-ali-shah.vercel.app/)**
+
+[![CropWise App Preview](./Models/crop-recommendation-system.png)](https://crop-recommendation-system-sajjad-ali-shah.vercel.app/)
 
 ---
 
