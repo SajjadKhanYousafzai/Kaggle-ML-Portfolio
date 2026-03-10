@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ─── CSS Custom Properties ────────────────────────────────────────── */
+:root {
+  --green-50:  #f0fdf4;
+  --green-100: #dcfce7;
+  --green-700: #15803d;
+  --green-900: #14532d;
+  --green-950: #052e16;
+}
+
+/* ─── Base Resets ───────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 8px; }
+::-webkit-scrollbar-track  { background: #f0fdf4; }
+::-webkit-scrollbar-thumb  { background: #86efac; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #4ade80; }
+
+/* ─── Custom Range Slider ───────────────────────────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    #16a34a var(--range-progress, 50%),
+    #d1fae5 var(--range-progress, 50%)
+  );
+  border-radius: 9999px;
+  height: 6px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #d1fae5;
+  border-radius: 9999px;
+  height: 6px;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: #16a34a;
+  border-radius: 9999px;
+  height: 6px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #15803d;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(21, 128, 61, 0.45);
+  margin-top: -8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #15803d;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(21, 128, 61, 0.45);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 4px 14px rgba(21, 128, 61, 0.55);
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 4px 14px rgba(21, 128, 61, 0.55);
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.4);
+}
+
+/* ─── Glassmorphism Utility ─────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-dark {
+  background: rgba(5, 46, 22, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ─── Animated Gradient Text ────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #4ade80 0%, #86efac 50%, #d9f99d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Hero Background Pattern ───────────────────────────────────────── */
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(74, 222, 128, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(22, 163, 74, 0.12) 0%, transparent 50%);
+}
+
+.hero-mesh {
+  background-image:
+    linear-gradient(rgba(74, 222, 128, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 222, 128, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ─── Floating Leaf Animations ──────────────────────────────────────── */
+@keyframes floatLeaf {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+  33%  { transform: translateY(-22px) rotate(6deg); opacity: 1; }
+  66%  { transform: translateY(-10px) rotate(-4deg); opacity: 0.85; }
+}
+
+@keyframes floatLeafReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+  33%  { transform: translateY(-16px) rotate(-8deg); opacity: 0.9; }
+  66%  { transform: translateY(-28px) rotate(5deg); opacity: 0.75; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: var(--progress-width); }
+}
+
+.float-1  { animation: floatLeaf        7s ease-in-out infinite; }
+.float-2  { animation: floatLeafReverse 9s ease-in-out infinite 1.5s; }
+.float-3  { animation: floatLeaf        11s ease-in-out infinite 3s; }
+.float-4  { animation: floatLeafReverse 8s ease-in-out infinite 0.5s; }
+.float-5  { animation: floatLeaf        10s ease-in-out infinite 2s; }
+
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-scale-in   { animation: scaleIn  0.5s ease-out forwards; }
+
+.shimmer-btn {
+  background: linear-gradient(90deg, #15803d 25%, #22c55e 50%, #15803d 75%);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.progress-bar-animated {
+  animation: progressFill 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ─── Confidence badge colors ───────────────────────────────────────── */
+.conf-high   { background: #dcfce7; color: #14532d; border-color: #86efac; }
+.conf-medium { background: #fef9c3; color: #713f12; border-color: #fde047; }
+.conf-low    { background: #fee2e2; color: #7f1d1d; border-color: #fca5a5; }
+
+/* ─── Tab underline transition ──────────────────────────────────────── */
+.tab-btn {
+  position: relative;
+  transition: color 0.2s;
+}
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #15803d;
+  border-radius: 99px;
+  transition: width 0.25s ease;
+}
+.tab-btn.active::after  { width: 100%; }
+.tab-btn.active         { color: #15803d; }
