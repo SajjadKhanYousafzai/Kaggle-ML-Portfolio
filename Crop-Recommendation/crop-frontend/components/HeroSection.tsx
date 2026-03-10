@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const FLOATING_ITEMS = [
   { emoji: "🌾", size: "text-4xl", pos: "top-[15%] left-[8%]",  cls: "float-1" },
@@ -22,7 +22,10 @@ const STATS = [
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-hero-gradient hero-pattern">
+    <section
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden hero-pattern"
+      style={{ background: "linear-gradient(135deg, #052e16 0%, #14532d 40%, #166534 70%, #15803d 100%)" }}
+    >
       {/* Grid mesh overlay */}
       <div className="absolute inset-0 hero-mesh opacity-40 pointer-events-none" />
 
@@ -43,15 +46,6 @@ export default function HeroSection() {
 
       {/* Main content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center pt-24 pb-12">
-        {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-green-300 text-sm font-medium mb-8 animate-fade-in-up"
-          style={{ animationDelay: "0.1s", opacity: 0 }}
-        >
-          <Sparkles className="w-4 h-4 text-brand-400" />
-          Machine Learning · Random Forest · 99%+ Accuracy
-        </div>
-
         {/* Headline */}
         <h1
           className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.08] tracking-tight mb-6 animate-fade-in-up"

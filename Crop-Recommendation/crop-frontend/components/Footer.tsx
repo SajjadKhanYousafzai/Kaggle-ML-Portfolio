@@ -62,14 +62,6 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
               </a>
-              <a
-                href="https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold px-4 py-2 rounded-xl border border-white/20 transition-colors"
-              >
-                📦 Dataset
-              </a>
             </div>
           </div>
         </div>
